@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Ford",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 4,
+    "type": "manual",
+    "year": 2023,
+    "available": true,
+    "driver-type": ""
+  }
+]
