@@ -1,12 +1,86 @@
 [
   {
+    "name": "Toyota",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 5,
+    "type": "manual",
+    "year": 2023,
+    "available_at": "2024-03-14",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Dengan Sopir",
+    "time": "08.00"
+  },
+  {
+    "name": "Honda",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 5,
+    "type": "manual",
+    "year": 2023,
+    "available_at": "2024-03-15",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Dengan Sopir",
+    "time": "09.00"
+  },
+  {
     "name": "Ford",
     "price": 500000,
     "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
     "capacity": 4,
     "type": "manual",
     "year": 2023,
-    "available": true,
-    "driver-type": ""
+    "available_at": "2024-03-14",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Dengan Sopir",
+    "time": "09.00"
+  },
+  {
+    "name": "Suzuki",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 2,
+    "type": "manual",
+    "year": 2023,
+    "available_at": "2024-03-15",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Tanpa Sopir",
+    "time": "08.00"
+  },
+  {
+    "name": "BMW",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 3,
+    "type": "manual",
+    "year": 2023,
+    "available_at": "2024-03-13",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Tanpa Sopir",
+    "time": "10.00"
+  },
+  {
+    "name": "Mercedes-Benz",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 3,
+    "type": "manual",
+    "year": 2023,
+    "available_at": "2024-03-10",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Tanpa Sopir",
+    "time": "10.00"
+  },
+  {
+    "name": "BMW",
+    "price": 500000,
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum repudiandae delectus voluptatem cumque laudantium exercitationem reprehenderit ex aspernatur eaque?",
+    "capacity": 3,
+    "type": "manual",
+    "year": 2023,
+    "available_at": "2024-03-10",
+    "image": "../../assets/images/car-2.png",
+    "driver_type": "Dengan Sopir",
+    "time": "10.00"
   }
 ]

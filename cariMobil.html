@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=], initial-scale=1.0"
+      content="width=device-width, initial-scale=1.0"
     />
 
     <link
@@ -16,7 +16,7 @@
     <title>Cari Mobil</title>
   </head>
   <body>
-    <div class="bg-body-secondary">
+    <div class="bg-body-secondary overflow-hidden">
       <nav class="navbar navbar-expand-md px-4">
         <div class="container-xxl">
           <a
@@ -99,36 +99,42 @@
           <div
             class="search-bar-body w-100 rounded-3 bg-light my-auto px-3 py-4 shadow"
           >
-            <div class="filter-elements m-auto row row-cols-5">
+            <div
+              class="filter-elements m-auto row row-cols-lg-5 row-cols-1 gap-3 gap-lg-0"
+            >
               <div
                 class="driver-type d-flex flex-column justify-content-center"
               >
                 <div class="label">Tipe Driver</div>
-                <div class="dropdown">
-                  <a
-                    class="btn btn-light text-secondary dropdown-toggle border rounded-3 w-100"
-                    href="#"
-                    role="button"
+                <div class="btn-group">
+                  <button
+                    class="btn btn-light text-start text-secondary border dropdown-toggle"
+                    type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    id="driver-type-button-text"
                   >
-                    Pilih tipe driver
-                  </a>
-
-                  <ul class="dropdown-menu">
+                    Pilih Tipe Driver
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    id="dropdown-menu-driver"
+                  >
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >Dengan sopir</a
+                        id="dengan-supir"
                       >
+                        Dengan Sopir
+                      </button>
                     </li>
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >Tanpa sopir (lepas kunci)</a
+                        id="tanpa-sopir"
                       >
+                        Tanpa Sopir
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -137,6 +143,9 @@
                 <div class="label">Tanggal</div>
                 <div class="input-group">
                   <input
+                    id="date"
+                    min="2024-03-10"
+                    max="2024-03-15"
                     type="date"
                     placeholder="Pilih tanggal"
                     class="form-control text-secondary"
@@ -147,50 +156,58 @@
                 <div class="label">Waktu jemput/ambil</div>
                 <div class="dropdown">
                   <a
-                    class="btn btn-light text-secondary dropdown-toggle border rounded-3 w-100"
-                    href="#"
-                    role="button"
+                    class="btn text-start btn-light text-secondary dropdown-toggle border rounded-3 w-100"
+                    type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    id="time-button-text"
                   >
                     Pilih waktu
                   </a>
 
-                  <ul class="dropdown-menu">
+                  <ul
+                    class="dropdown-menu"
+                    id="dropdown-menu-time"
+                  >
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >08.00</a
+                        id="dengan-supir"
                       >
+                        08.00
+                      </button>
                     </li>
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >09.00</a
+                        id="tanpa-sopir"
                       >
+                        09.00
+                      </button>
                     </li>
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >10.00</a
+                        id="tanpa-sopir"
                       >
+                        10.00
+                      </button>
                     </li>
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >11.00</a
+                        id="tanpa-sopir"
                       >
+                        11.00
+                      </button>
                     </li>
                     <li>
-                      <a
+                      <button
                         class="dropdown-item"
-                        href="#"
-                        >12.00</a
+                        id="tanpa-sopir"
                       >
+                        12.00
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -201,6 +218,8 @@
                 <div class="label">Jumlah penumpang</div>
                 <div class="input-group">
                   <input
+                    id="capacity"
+                    min="1"
                     type="number"
                     class="form-control text-secondary"
                     placeholder="Jumlah penumpang"
@@ -211,6 +230,7 @@
                 class="search-button d-flex flex-column justify-content-center"
               >
                 <button
+                  id="search-button"
                   type="button"
                   class="btn btn-success"
                 >
@@ -221,257 +241,11 @@
           </div>
         </div>
       </div>
-      <div
-        class="container cards-container pb-5"
-        id="cards-container"
-      >
-        <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card">
-              <div class="img-container p-3">
-                <img
-                  src="./assets/images/car-2.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p class="mb-2">Nama/Tipe Mobil</p>
-                  <h5 class="fw-bold mb-2">Rp. 500.000/Jam</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium laborum tenetur maiores at saepe cumque tempore
-                    dicta enim nobis architecto.
-                  </p>
-                </div>
-                <div class="card-points d-flex flex-column gap-2">
-                  <div class="capacity d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/capacity.png" />
-                    </div>
-                    <div>4 Orang</div>
-                  </div>
-                  <div class="type d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/type.png" />
-                    </div>
-                    <div>Manual</div>
-                  </div>
-                  <div class="year d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/year.png" />
-                    </div>
-                    <div>2020</div>
-                  </div>
-                </div>
-                <div class="card-button w-100 mt-4">
-                  <a
-                    href="#"
-                    class="btn btn-success w-100"
-                    >Pilih</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="img-container p-3">
-                <img
-                  src="./assets/images/car-2.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p class="mb-2">Nama/Tipe Mobil</p>
-                  <h5 class="fw-bold mb-2">Rp. 500.000/Jam</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium laborum tenetur maiores at saepe cumque tempore
-                    dicta enim nobis architecto.
-                  </p>
-                </div>
-                <div class="card-points d-flex flex-column gap-2">
-                  <div class="capacity d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/capacity.png" />
-                    </div>
-                    <div>4 Orang</div>
-                  </div>
-                  <div class="type d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/type.png" />
-                    </div>
-                    <div>Manual</div>
-                  </div>
-                  <div class="year d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/year.png" />
-                    </div>
-                    <div>2020</div>
-                  </div>
-                </div>
-                <div class="card-button w-100 mt-4">
-                  <a
-                    href="#"
-                    class="btn btn-success w-100"
-                    >Pilih</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="img-container p-3">
-                <img
-                  src="./assets/images/car-2.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p class="mb-2">Nama/Tipe Mobil</p>
-                  <h5 class="fw-bold mb-2">Rp. 500.000/Jam</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium laborum tenetur maiores at saepe cumque tempore
-                    dicta enim nobis architecto.
-                  </p>
-                </div>
-                <div class="card-points d-flex flex-column gap-2">
-                  <div class="capacity d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/capacity.png" />
-                    </div>
-                    <div>4 Orang</div>
-                  </div>
-                  <div class="type d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/type.png" />
-                    </div>
-                    <div>Manual</div>
-                  </div>
-                  <div class="year d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/year.png" />
-                    </div>
-                    <div>2020</div>
-                  </div>
-                </div>
-                <div class="card-button w-100 mt-4">
-                  <a
-                    href="#"
-                    class="btn btn-success w-100"
-                    >Pilih</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="img-container p-3">
-                <img
-                  src="./assets/images/car-2.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p class="mb-2">Nama/Tipe Mobil</p>
-                  <h5 class="fw-bold mb-2">Rp. 500.000/Jam</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium laborum tenetur maiores at saepe cumque tempore
-                    dicta enim nobis architecto.
-                  </p>
-                </div>
-                <div class="card-points d-flex flex-column gap-2">
-                  <div class="capacity d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/capacity.png" />
-                    </div>
-                    <div>4 Orang</div>
-                  </div>
-                  <div class="type d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/type.png" />
-                    </div>
-                    <div>Manual</div>
-                  </div>
-                  <div class="year d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/year.png" />
-                    </div>
-                    <div>2020</div>
-                  </div>
-                </div>
-                <div class="card-button w-100 mt-4">
-                  <a
-                    href="#"
-                    class="btn btn-success w-100"
-                    >Pilih</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="img-container p-3">
-                <img
-                  src="./assets/images/car-2.png"
-                  class="card-img-top"
-                  alt="..."
-                />
-              </div>
-              <div class="card-body">
-                <div class="card-text">
-                  <p class="mb-2">Nama/Tipe Mobil</p>
-                  <h5 class="fw-bold mb-2">Rp. 500.000/Jam</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium laborum tenetur maiores at saepe cumque tempore
-                    dicta enim nobis architecto.
-                  </p>
-                </div>
-                <div class="card-points d-flex flex-column gap-2">
-                  <div class="capacity d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/capacity.png" />
-                    </div>
-                    <div>4 Orang</div>
-                  </div>
-                  <div class="type d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/type.png" />
-                    </div>
-                    <div>Manual</div>
-                  </div>
-                  <div class="year d-flex gap-3 align-items-center">
-                    <div class="icon">
-                      <img src="assets/icons/year.png" />
-                    </div>
-                    <div>2020</div>
-                  </div>
-                </div>
-                <div class="card-button w-100 mt-4">
-                  <a
-                    href="#"
-                    class="btn btn-success w-100"
-                    >Pilih</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+      <div class="container pb-5">
+        <div
+          id="cards-container"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"
+        ></div>
       </div>
     </div>
     <div
@@ -541,6 +315,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/index.js"></script>
+    <script
+      type="module"
+      src="./assets/js/index.js"
+    ></script>
   </body>
 </html>
